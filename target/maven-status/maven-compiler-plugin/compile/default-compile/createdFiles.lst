@@ -1,2 +1,12 @@
+com\company\library\exception\LibraryException.class
+com\company\library\exception\ResourceNotFoundException.class
+com\company\library\domain\LibraryItemFactory.class
 com\company\library\AntiPatternDemo$Account.class
 com\company\library\AntiPatternDemo.class
+com\company\library\domain\Book.class
+com\company\library\domain\Dvd.class
+com\company\library\domain\Book$Builder.class
+com\company\library\domain\Magazine.class
+com\company\library\domain\LibraryItem.class
+com\company\library\exception\ValidationException.class
+com\company\library\exception\UnsupportedItemTypeException.class

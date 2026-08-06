@@ -1,1 +1,10 @@
 C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\AntiPatternDemo.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\domain\Book.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\domain\Dvd.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\domain\LibraryItem.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\domain\LibraryItemFactory.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\domain\Magazine.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\exception\LibraryException.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\exception\ResourceNotFoundException.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\exception\UnsupportedItemTypeException.java
+C:\Users\divin\Desktop\library-management-system\src\main\java\com\company\library\exception\ValidationException.java

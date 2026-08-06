@@ -1,1 +1,3 @@
+com\company\library\domain\BookTest.class
 com\company\library\SetupTest.class
+com\company\library\domain\LibraryItemFactoryTest.class
