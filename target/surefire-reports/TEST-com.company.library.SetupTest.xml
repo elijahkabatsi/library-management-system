@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.company.library.SetupTest" time="4.143" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.company.library.SetupTest" time="16.151" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Users\divin\.jdks\ms-21.0.12\bin"/>
-    <property name="sun.java.command" value="C:\Users\divin\AppData\Local\Temp\surefire6302705188247837096\surefirebooter-20260807001211153_3.jar C:\Users\divin\AppData\Local\Temp\surefire6302705188247837096 2026-08-07T00-12-08_534-jvmRun1 surefire-20260807001211153_1tmp surefire_0-20260807001211153_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013\surefirebooter-20260807041041052_3.jar C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013 2026-08-07T04-10-16_587-jvmRun1 surefire-20260807041041052_1tmp surefire_0-20260807041041052_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\divin\Desktop\library-management-system\target\test-classes;C:\Users\divin\Desktop\library-management-system\target\classes;C:\Users\divin\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\divin\.m2\repository\ch\qos\logback\logback-classic\1.5.3\logback-classic-1.5.3.jar;C:\Users\divin\.m2\repository\ch\qos\logback\logback-core\1.5.3\logback-core-1.5.3.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\divin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\divin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\divin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\divin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\divin\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\divin\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\divin\AppData\Local\Temp\surefire6302705188247837096\surefirebooter-20260807001211153_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013\surefirebooter-20260807041041052_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.12+8-LTS"/>
@@ -64,8 +64,8 @@
     <property name="maven.repo.local" value="C:\Users\divin\.m2\repository"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testHalfUpdatedState" classname="com.company.library.SetupTest" time="4.109">
-    <system-out><![CDATA[2026-08-07 00:12:40.199 [main] ERROR com.company.library.AntiPatternDemo - Failed to update balance for Bob
+  <testcase name="testHalfUpdatedState" classname="com.company.library.SetupTest" time="16.124">
+    <system-out><![CDATA[2026-08-07 04:11:44.535 [main] ERROR com.company.library.AntiPatternDemo - Failed to update balance for Bob
 java.lang.IllegalArgumentException: Negative addition not allowed
 	at com.company.library.AntiPatternDemo$Account.updateAccount(AntiPatternDemo.java:29)
 	at com.company.library.SetupTest.testHalfUpdatedState(SetupTest.java:23)
@@ -140,5 +140,5 @@ java.lang.IllegalArgumentException: Negative addition not allowed
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-out>
   </testcase>
-  <testcase name="testReturnInFinallySwallowsException" classname="com.company.library.SetupTest" time="0.009"/>
+  <testcase name="testReturnInFinallySwallowsException" classname="com.company.library.SetupTest" time="0.01"/>
 </testsuite>
