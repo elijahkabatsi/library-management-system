@@ -1,36 +1,41 @@
 package com.company.library.domain;
 
+import com.company.library.util.IdGenerator;
+import java.math.BigDecimal;
+import java.util.List;
+
 public final class Dvd extends LibraryItem {
+    private final int durationMinutes;
+    private final String director;
 
-    private int duration;
-    private String director;
-
-    public Dvd(String id, String title, int publicationYear, boolean isAvailable, int duration, String director) {
-        super(id, title, publicationYear, isAvailable);
-        this.duration = duration;
-        this.director = director;
+    public Dvd(String pId, String pTitle, int pPublicationYear, boolean pAvailable, List<String> pTags, int pDurationMinutes, String pDirector) {
+        super(pId, pTitle, pPublicationYear, pAvailable, pTags);
+        this.durationMinutes = pDurationMinutes;
+        this.director = pDirector;
     }
 
     @Override
-    public String describe() {
-        return "DVD: " + getTitle() + " directed by " + director + " (" + duration + " mins)";
-    }
+    public int loanPeriodDays() { return 3; }
 
     @Override
-    public double replacementValue() {
-        return 15.0;
-    }
+    public BigDecimal replacementValue() { return new BigDecimal("19.99"); }
 
     @Override
-    public int loanPeriodDays() {
-        return 7;
+    public String describe() { return "DVD: " + getTitle() + " directed by " + director; }
+
+    @Override
+    public Dvd copy() {
+        return new Dvd(
+                IdGenerator.INSTANCE.nextBookId(),
+                getTitle(),
+                getPublicationYear(),
+                isAvailable(),
+                getTags(),
+                this.durationMinutes,
+                this.director
+        );
     }
 
-    public int getDuration() {
-        return duration;
-    }
-
-    public String getDirector() {
-        return director;
-    }
+    public int getDurationMinutes() { return durationMinutes; }
+    public String getDirector() { return director; }
 }

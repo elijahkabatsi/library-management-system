@@ -1,11 +1,19 @@
 package com.company.library.exception;
 
 public class ValidationException extends LibraryException {
-    public ValidationException(String message) {
-        super(message);
+    private String field;
+    private Object rejectedValue;
+
+    public ValidationException(String pMessage) {
+        super(pMessage);
     }
 
-    public ValidationException(String message, Throwable cause) {
-        super(message, cause);
+    public ValidationException(String pMessage, String pField, Object pRejectedValue) {
+        super(pMessage + " [Field: " + pField + ", Value: " + pRejectedValue + "]");
+        this.field = pField;
+        this.rejectedValue = pRejectedValue;
     }
+
+    public String getField() { return field; }
+    public Object getRejectedValue() { return rejectedValue; }
 }
