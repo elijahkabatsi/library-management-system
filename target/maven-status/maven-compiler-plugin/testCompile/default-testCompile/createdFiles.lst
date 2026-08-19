@@ -1,4 +1,4 @@
+com\company\library\config\IdGeneratorTest.class
+com\company\library\factory\LibraryItemFactoryTest.class
 com\company\library\SetupTest.class
-com\company\library\domain\LibraryItemFactoryTest.class
-com\company\library\domain\BookTest.class
-com\company\library\util\IdGeneratorTest.class
+com\company\library\config\LibraryConfigTest.class

@@ -9,9 +9,9 @@ public abstract sealed class LibraryItem permits Book, Magazine, Dvd {
     private final int publicationYear;
     private final boolean available;
 
-    protected LibraryItem(String id, String title, int publicationYear, boolean available) {
-        this.id = Objects.requireNonNull(id, "id must not be null");
-        this.title = Objects.requireNonNull(title, "title must not be null");
+    public LibraryItem(String id, String title, int publicationYear, boolean available) {
+        this.id = Objects.requireNonNull(id, "ID must not be null");
+        this.title = Objects.requireNonNull(title, "Title must not be null");
         this.publicationYear = publicationYear;
         this.available = available;
     }
@@ -21,8 +21,7 @@ public abstract sealed class LibraryItem permits Book, Magazine, Dvd {
     public int getPublicationYear() { return publicationYear; }
     public boolean isAvailable() { return available; }
 
-    // Abstract methods to be implemented by concrete subclasses
     public abstract int loanPeriodDays();
-    public abstract double replacementValue();
+    public abstract BigDecimal replacementValue();
     public abstract String describe();
 }

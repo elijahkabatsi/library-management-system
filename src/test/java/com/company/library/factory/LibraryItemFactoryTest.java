@@ -1,5 +1,7 @@
-package com.company.library.domain;
+package com.company.library.factory;
 
+import com.company.library.domain.Dvd;
+import com.company.library.domain.LibraryItem;
 import com.company.library.exception.UnsupportedItemTypeException;
 
 public class LibraryItemFactoryTest {

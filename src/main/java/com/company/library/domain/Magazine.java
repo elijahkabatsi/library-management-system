@@ -13,18 +13,18 @@ public final class Magazine extends LibraryItem {
     }
 
     @Override
-    public int loanPeriodDays() {
-        return 7; // Business Rule: 7 days max for magazines
-    }
+    public int loanPeriodDays() { return 7; }
 
     @Override
-    public double replacementValue() {
-        return 9.99;
+    public BigDecimal replacementValue() {
+        return new BigDecimal("10.00");
     }
 
     @Override
     public String describe() {
-        return String.format("Magazine [ID: %s, Title: %s, Issue #: %d, Month: %s]",
-                getId(), getTitle(), issueNumber, publicationMonth);
+        return "Magazine: " + getTitle() + " - Issue #" + issueNumber + " (" + publicationMonth + ")";
     }
+
+    public int getIssueNumber() { return issueNumber; }
+    public String getPublicationMonth() { return publicationMonth; }
 }

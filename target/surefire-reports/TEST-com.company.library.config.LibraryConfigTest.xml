@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.company.library.domain.BookTest" time="2.51" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.company.library.config.LibraryConfigTest" time="1.038" tests="3" errors="1" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Users\divin\.jdks\ms-21.0.12\bin"/>
-    <property name="sun.java.command" value="C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013\surefirebooter-20260807041041052_3.jar C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013 2026-08-07T04-10-16_587-jvmRun1 surefire-20260807041041052_1tmp surefire_0-20260807041041052_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\divin\AppData\Local\Temp\surefire12724326390091697716\surefirebooter-20260819212533235_3.jar C:\Users\divin\AppData\Local\Temp\surefire12724326390091697716 2026-08-19T21-25-26_429-jvmRun1 surefire-20260819212533235_1tmp surefire_0-20260819212533235_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\divin\Desktop\library-management-system\target\test-classes;C:\Users\divin\Desktop\library-management-system\target\classes;C:\Users\divin\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\divin\.m2\repository\ch\qos\logback\logback-classic\1.5.3\logback-classic-1.5.3.jar;C:\Users\divin\.m2\repository\ch\qos\logback\logback-core\1.5.3\logback-core-1.5.3.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\divin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\divin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\divin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\divin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\divin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\divin\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\divin\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\divin\AppData\Local\Temp\surefire9971411307305266013\surefirebooter-20260807041041052_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\divin\AppData\Local\Temp\surefire12724326390091697716\surefirebooter-20260819212533235_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.12+8-LTS"/>
@@ -64,9 +64,51 @@
     <property name="maven.repo.local" value="C:\Users\divin\.m2\repository"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldCreateBookSuccessfully" classname="com.company.library.domain.BookTest" time="1.323"/>
-  <testcase name="shouldThrowExceptionWhenIsbnIsInvalid(String)[1]" classname="com.company.library.domain.BookTest" time="0.478"/>
-  <testcase name="shouldThrowExceptionWhenIsbnIsInvalid(String)[2]" classname="com.company.library.domain.BookTest" time="0.011"/>
-  <testcase name="shouldVerifyEqualityBasedOnIsbn" classname="com.company.library.domain.BookTest" time="0.006"/>
-  <testcase name="shouldThrowExceptionWhenYearIsInvalid" classname="com.company.library.domain.BookTest" time="0.008"/>
+  <testcase name="shouldLoadValidConfig" classname="com.company.library.config.LibraryConfigTest" time="0.412">
+    <error type="java.lang.ExceptionInInitializerError"><![CDATA[java.lang.ExceptionInInitializerError
+	at com.company.library.config.LibraryConfigTest.shouldLoadValidConfig(LibraryConfigTest.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.company.library.exception.ConfigurationException: Missing mandatory property 'library.name' in application.properties
+	at com.company.library.config.LibraryConfig.getRequiredProperty(LibraryConfig.java:59)
+	at com.company.library.config.LibraryConfig.<init>(LibraryConfig.java:22)
+	at com.company.library.config.LibraryConfig.<clinit>(LibraryConfig.java:11)
+	... 4 more
+]]></error>
+  </testcase>
+  <testcase name="shouldThrowWhenKeyIsMissing" classname="com.company.library.config.LibraryConfigTest" time="0.222">
+    <failure message="&#10;Expecting actual throwable to be an instance of:&#10;  com.company.library.exception.ConfigurationException&#10;but was:&#10;  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig&#10;	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenKeyIsMissing$1(LibraryConfigTest.java:38)&#10;	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)&#10;	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)&#10;	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.company.library.exception.ConfigurationException
+but was:
+  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig
+	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenKeyIsMissing$1(LibraryConfigTest.java:38)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)
+	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.company.library.config.LibraryConfigTest.shouldThrowWhenKeyIsMissing(LibraryConfigTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+  </testcase>
+  <testcase name="shouldThrowWhenFileNotFound" classname="com.company.library.config.LibraryConfigTest" time="0.094">
+    <failure message="&#10;Expecting actual throwable to be an instance of:&#10;  com.company.library.exception.ConfigurationException&#10;but was:&#10;  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig&#10;	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenFileNotFound$0(LibraryConfigTest.java:27)&#10;	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)&#10;	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)&#10;	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.company.library.exception.ConfigurationException
+but was:
+  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig
+	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenFileNotFound$0(LibraryConfigTest.java:27)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)
+	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.company.library.config.LibraryConfigTest.shouldThrowWhenFileNotFound(LibraryConfigTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+  </testcase>
 </testsuite>

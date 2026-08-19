@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: com.company.library.config.LibraryConfigTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 1.038 s <<< FAILURE! -- in com.company.library.config.LibraryConfigTest
+com.company.library.config.LibraryConfigTest.shouldLoadValidConfig -- Time elapsed: 0.412 s <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.company.library.config.LibraryConfigTest.shouldLoadValidConfig(LibraryConfigTest.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.company.library.exception.ConfigurationException: Missing mandatory property 'library.name' in application.properties
+	at com.company.library.config.LibraryConfig.getRequiredProperty(LibraryConfig.java:59)
+	at com.company.library.config.LibraryConfig.<init>(LibraryConfig.java:22)
+	at com.company.library.config.LibraryConfig.<clinit>(LibraryConfig.java:11)
+	... 4 more
+
+com.company.library.config.LibraryConfigTest.shouldThrowWhenKeyIsMissing -- Time elapsed: 0.222 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.company.library.exception.ConfigurationException
+but was:
+  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig
+	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenKeyIsMissing$1(LibraryConfigTest.java:38)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)
+	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.company.library.config.LibraryConfigTest.shouldThrowWhenKeyIsMissing(LibraryConfigTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.company.library.config.LibraryConfigTest.shouldThrowWhenFileNotFound -- Time elapsed: 0.094 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.company.library.exception.ConfigurationException
+but was:
+  java.lang.NoClassDefFoundError: Could not initialize class com.company.library.config.LibraryConfig
+	at com.company.library.config.LibraryConfigTest.lambda$shouldThrowWhenFileNotFound$0(LibraryConfigTest.java:27)
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:63)
+	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:892)
+	...(72 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.company.library.config.LibraryConfigTest.shouldThrowWhenFileNotFound(LibraryConfigTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
